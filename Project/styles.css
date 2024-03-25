@@ -1,0 +1,58 @@
+#dashboard {
+  grid-area: dashboard;
+}
+#header {
+  grid-area: header;
+}
+#menu {
+  grid-area: menu;
+}
+
+#container {
+  display: grid;
+  position: fixed;
+  grid-template-areas:
+    "dashboard header header header header header header"
+    "dashboard menu menu menu menu menu menu"
+    "dashboard menu menu menu menu menu menu"
+    "dashboard menu menu menu menu menu menu"
+    "dashboard menu menu menu menu menu menu";
+  gap: 10px;
+  background-color: #2196f3;
+  width: auto;
+  border: 10px black double;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+}
+
+#container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 30px;
+}
+
+li, ul{
+  list-style-type: none;
+  padding: 0 0 .5em 1em;
+  margin: 0;
+  text-align: start;
+}
+
+/*
+    Otra posible solucion es    
+    #dashboard{
+    grid-column: 1/2;
+    grid-row: 1/6;
+    }
+    #header{
+    grid-column: 2/8;
+    grid-row: 1/2;
+    }
+    #menu{
+    grid-column: 2/8;
+    grid-row: 2/6;
+    }
+*/
