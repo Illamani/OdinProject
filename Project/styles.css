@@ -1,5 +1,9 @@
 #dashboard {
   grid-area: dashboard;
+  background-color: rgba(25,146,212,255) !important;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 #header {
   grid-area: header;
@@ -8,15 +12,32 @@
   grid-area: menu;
 }
 
+#dashboard-icon{
+  padding: .5em 0 .25em .5em;
+  text-align: start;
+  font-weight: 600;
+  img{
+    transform: scale(2);
+  }
+}
+#list-icon{
+  text-align: start;
+  font-weight: 500;
+  font-size: smaller;
+  img{
+    transform: scale(1.2);
+  }
+}
+
 #container {
   display: grid;
   position: fixed;
   grid-template-areas:
-    "dashboard header header header header header header"
-    "dashboard menu menu menu menu menu menu"
-    "dashboard menu menu menu menu menu menu"
-    "dashboard menu menu menu menu menu menu"
-    "dashboard menu menu menu menu menu menu";
+    "dashboard header header header header header header header header header"
+    "dashboard menu menu menu menu menu menu menu menu menu"
+    "dashboard menu menu menu menu menu menu menu menu menu"
+    "dashboard menu menu menu menu menu menu menu menu menu"
+    "dashboard menu menu menu menu menu menu menu menu menu";
   gap: 10px;
   background-color: #2196f3;
   width: auto;
@@ -36,9 +57,19 @@
 
 li, ul{
   list-style-type: none;
-  padding: 0 0 .5em 1em;
+  padding: 0 0 .5em 0.5em;
   margin: 0;
   text-align: start;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+.icon{
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(181deg) brightness(106%) contrast(101%);
+  padding: 0 .75em;
 }
 
 /*
